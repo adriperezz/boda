@@ -1,0 +1,21 @@
+---
+import Countdown from './Countdown.jsx';
+---
+
+<section
+  class="relative h-[80vh] flex items-center justify-center text-center bg-cover bg-center bg-fixed"
+  style="background-image: url('/images/adriybruna.jpg')"
+>
+  <div class="absolute inset-0 bg-verde-oscuro/50 h-full"></div>
+  <div
+    class="relative z-10 text-blanco p-6 flex flex-col justify-evenly h-full"
+  >
+    <h1 class="text-4xl lg:text-6xl font-windsong mb-4">¡Nos Casamos!</h1>
+    <div>
+      <Countdown client:load />
+      <p class="text-xl font-thin mt-6">
+        30 de Mayo de 2025<span>&nbsp; | &nbsp;</span>Baiona, Pontevedra
+      </p>
+    </div>
+  </div>
+</section>
