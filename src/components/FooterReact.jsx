@@ -10,7 +10,7 @@ export default function Footer() {
     <footer className="bg-verde-oscuro text-white py-6">
       <div className="container mx-auto text-center space-y-4">
         {/* Flecha hacia arriba */}
-        <div>
+        <div className="-mb-4">
           <button onClick={scrollToTop} className="text-arena">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -36,8 +36,14 @@ export default function Footer() {
           </p>
         </div>
 
+        <div>
+          <p className="text-sm text-neutral-400">
+            No dudes en escribirnos si tienes cualquier pregunta.
+          </p>
+        </div>
+
         {/* Copyright */}
-        <div className="text-sm text-gray-400">
+        <div className="text-sm text-neutral-400">
           <p>© {new Date().getFullYear()} Boda de Adrián y Bruna</p>
         </div>
       </div>

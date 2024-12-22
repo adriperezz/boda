@@ -3,8 +3,8 @@ import { useState } from 'react';
 export default function Formulario() {
   const [formData, setFormData] = useState({
     nombre: '',
-    telefono: '',
     asistencia: false,
+    menuInfantil: false,
     alergia: '',
   });
 
@@ -23,14 +23,23 @@ export default function Formulario() {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-[50vh] py-6 px-4 container mx-auto">
+    <div
+      className="flex justify-center items-center min-h-[50vh] py-6 px-4 container mx-auto"
+      id="confirmar"
+    >
       <form
         onSubmit={handleSubmit}
         className="bg-white p-8 g container w-full space-y-6"
       >
         <h2 className="text-3xl lg:text-4xl font-semibold text-verde-oscuro text-center mb-12 lg:mb-6">
-          Confirmación de Asistencia
+          Confirmación de asistencia
         </h2>
+        <p className="text-verde-medio">
+          **¡IMPORTANTE!**
+          <br />
+          Rellenar un formulario por persona (Ejemplo: 2 adultos y 2 hijos
+          serían 4 formularios, siendo 1 por persona)
+        </p>
 
         {/* Nombre Completo */}
         <div>
@@ -51,23 +60,22 @@ export default function Formulario() {
           />
         </div>
 
-        {/* Teléfono de Contacto */}
-        <div>
-          <label
-            htmlFor="telefono"
-            className="block text-verde-oscuro font-semibold mb-2"
-          >
-            Teléfono de Contacto
-          </label>
+        {/* Menu infantil */}
+        <div className="flex items-center space-x-2">
           <input
-            type="tel"
-            id="telefono"
-            name="telefono"
-            value={formData.telefono}
+            type="checkbox"
+            id="menuInfantil"
+            name="menuInfantil"
+            checked={formData.menuInfantil}
             onChange={handleChange}
-            className="w-full px-4 py-2 border border-verde-oscuro rounded-md focus:outline-none focus:ring-2 focus:ring-verde-medio text-verde-medio"
-            required
+            className="h-5 w-5 border border-verde-oscuro focus:ring-2 focus:ring-verde-medio text-verde-medio"
           />
+          <label
+            htmlFor="asistencia"
+            className="text-verde-oscuro font-semibold"
+          >
+            ¿Menú infantil?
+          </label>
         </div>
 
         {/* Confirmar Asistencia */}
@@ -94,9 +102,10 @@ export default function Formulario() {
             htmlFor="alergia"
             className="block text-verde-oscuro font-semibold mb-2"
           >
-            ¿Tienes alguna alergia o intolerancia alimenticia?
+            ¿Tienes alguna alergia / intolerancia / restricción alimentaria?
           </label>
-          <textarea
+          <input
+            type="text"
             id="alergia"
             name="alergia"
             value={formData.alergia}
