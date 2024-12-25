@@ -5,7 +5,10 @@ const CuentaReact = () => {
     const accountNumber = document.getElementById('account-number').textContent;
     const btnCopy = document.getElementById('btnCopy');
     navigator.clipboard.writeText(accountNumber).then(() => {
-      btnCopy.textContent = 'Copiado!';
+      btnCopy.textContent = '¡Copiado!';
+      setTimeout(() => {
+        btnCopy.textContent = 'Copiar';
+      }, 5000);
     });
   };
 
@@ -13,7 +16,7 @@ const CuentaReact = () => {
     <section className="py-20 bg-verde-oscuro" id="regalo-boda">
       <div className="container mx-auto md:px-12 text-center rounded-lg p-8">
         <h2 className="text-3xl lg:text-4xl font-semibold text-blanco text-center mb-8 lg:mb-6">
-          Nuestra lista de deseos
+          Regalo opcional
         </h2>
         <div className="text-center">
           <p className="text-lg text-white mb-6 font-lato">

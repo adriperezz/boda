@@ -164,7 +164,7 @@ export default function Formulario() {
         </div>
         <div>
           <p className="text-neutral-500">
-            Fecha límite de confirmación: 30/4/25
+            Fecha límite de confirmación: 30/4/25 (1 mes antes del evento)
           </p>
         </div>
 
