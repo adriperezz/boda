@@ -1,24 +1,7 @@
 ---
+import CuentaReact from './CuentaReact';
+
 // Este componente utiliza las fuentes y colores definidos en tu configuración de TailwindCSS.
 ---
 
-<section class="py-20 bg-verde-oscuro" id="regalo-boda">
-  <div class="container mx-auto md:px-12 text-center rounded-lg p-8">
-    <h2
-      class="text-3xl lg:text-4xl font-semibold text-blanco text-center mb-8 lg:mb-6"
-    >
-      Nuestra lista de deseos
-    </h2>
-    <div class="text-center">
-      <p class="text-lg text-white mb-6 font-lato">
-        Vuestra presencia será nuestro mejor regalo, pero si queréis contribuir
-        a nuestro futuro juntos, podéis hacerlo en este número de cuenta:
-      </p>
-      <div
-        class="tracking-widest text-2xl font-thin py-4 px-6 inline-block text-white"
-      >
-        IBAN: ES09 1583 0001 1491 3670 5203
-      </div>
-    </div>
-  </div>
-</section>
+<CuentaReact client:load />

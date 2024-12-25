@@ -172,7 +172,7 @@ export default function Formulario() {
         <div className="text-center">
           <button
             type="submit" // Este debe ser el tipo 'submit'
-            className="px-6 py-3 w-1/2 bg-verde-oscuro text-white font-semibold rounded-md hover:bg-verde-oscuro focus:outline-none focus:ring-2 focus:ring-verde-medio"
+            className="px-6 py-3  w-full lg:w-1/2 bg-verde-oscuro text-white font-semibold rounded-md hover:bg-verde-oscuro focus:outline-none focus:ring-2 focus:ring-verde-medio"
           >
             Enviar
           </button>
