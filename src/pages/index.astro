@@ -11,11 +11,31 @@ import Musica from '../components/Musica.jsx';
 import Fotos from '../components/Fotos.astro';
 import Hoteles from '../components/Hoteles.astro';
 import Cuenta from '../components/Cuenta.astro';
+import { AstroSeo } from '@astrolib/seo';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
+<AstroSeo
+  title="Bruna y Adrián | 30.05.25"
+  description="La web de nuestra boda."
+  canonical="https://brunayadri.vajra.es"
+  openGraph={{
+    type: 'website',
+    url: 'https://brunayadri.vajra.es',
+    title: 'Bruna y Adrián | 30.05.25',
+    description: 'La web de nuestra boda.',
+    images: [
+      {
+        url: '/images/adriybruna.webp',
+        width: 1200,
+        height: 630,
+        alt: 'Adri y Bruna',
+      },
+    ],
+  }}
+/>
 <Layout>
   <Header />
   <Hero />

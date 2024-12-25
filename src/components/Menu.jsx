@@ -38,7 +38,7 @@ export default function Menu() {
             : 'opacity-0 pointer-events-none'
         }`}
       >
-        <div className="container h-screen mx-auto text-verde-oscuro text-lg flex flex-col justify-center items-center w-screen gap-8 -mt-8">
+        <div className="container h-screen mx-auto text-verde-oscuro text-lg flex flex-col justify-center items-center w-screen gap-8 -mt-10">
           <div className="text-3xl text-white font-windsong font-normal rounded-full size-24 border border-white flex justify-center items-center">
             <a href="#">AyB</a>
           </div>
