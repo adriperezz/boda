@@ -21,10 +21,12 @@ const CuentaReact = () => {
             contribuir a nuestro futuro juntos, podéis hacerlo en este número de
             cuenta:
           </p>
-          <div className="tracking-widest lg:text-2xl font-thin py-4 px-6 inline-block text-white">
+          <div className="tracking-widest lg:text-2xl font-thin py-4 px-2 md:px-6 inline-block text-white">
             <p>
-              IBAN:
-              <span id="account-number"> ES09 1583 0001 1491 3670 5203</span>
+              IBAN:&nbsp;
+              <span id="account-number" className="block md:inline">
+                ES09 1583 0001 1491 3670 5203
+              </span>
             </p>
           </div>
           <button
