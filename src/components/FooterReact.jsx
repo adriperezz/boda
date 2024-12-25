@@ -32,7 +32,7 @@ export default function Footer() {
         {/* Adrian y Bruna con font-windsong */}
         <div className="font-windsong text-2xl text-arena">
           <p>
-            Adrián<span>&nbsp;&nbsp;</span>y<span>&nbsp;&nbsp;</span>Bruna
+            Bruna<span>&nbsp;&nbsp;</span>y<span>&nbsp;&nbsp;</span>Adrián
           </p>
         </div>
 
@@ -44,7 +44,7 @@ export default function Footer() {
 
         {/* Copyright */}
         <div className="text-sm text-neutral-400">
-          <p>© {new Date().getFullYear()} Boda de Adrián y Bruna</p>
+          <p>© {new Date().getFullYear()} Boda de Bruna y Adrián</p>
         </div>
       </div>
     </footer>
