@@ -1,3 +1,7 @@
+---
+import RoadmapSingle from './RoadmapSingle.astro';
+---
+
 <section id="ubicacion" class="py-20 bg-arena px-6">
   <div class="container mx-auto">
     <!-- Título -->
@@ -15,98 +19,27 @@
         class="relative h-auto flex flex-col lg:justify-between items-center w-full"
       >
         <!-- Punto A -->
-        <div class="relative w-full text-verde-oscuro">
-          <div
-            class="relative w-full flex flex-col lg:flex-row justify-evenly items-center text-center bg-white border-2 border-verde-suave rounded-md shadow-lg py-10 lg:py-14 px-8 lg:px-12 divide-y lg:divide-y-0 lg:divide-x divide-verde-suave"
-          >
-            <div class="lg:w-1/2 py-10 lg:py-2">
-              <p class="font-medium text-verde-oscuro text-4xl">
-                Colegiata de Santa María de Baiona
-              </p>
-              <p class="font-semibold text-verde-medio text-2xl">17:30</p>
-            </div>
-            <div class="lg:w-1/2 py-10 lg:py-2">
-              <div class="lg:w-2/3 mx-auto">
-                <div class="text-justify mb-6">
-                  <p class="font-semibold">
-                    La Colegiata de Santa María de Baiona: Donde la historia se
-                    mezcla con el amor.
-                  </p>
-                  <p>
-                    Este rincón gótico del siglo XIII, en pleno casco histórico
-                    de Baiona, es perfecto para decir "Sí, quiero". Con su
-                    interior sencillo pero elegante, y muros que han visto
-                    siglos de bodas felices, combina historia, encanto y vistas
-                    al mar. Un lugar mágico donde la solemnidad y el amor van de
-                    la mano. Solo recuerda: ¡las campanas no esperan! 😉
-                  </p>
-                </div>
-                <div class="text-verde-medio inline">
-                  <a
-                    href="https://maps.app.goo.gl/h3NMABJhLgm2Rsjq5"
-                    target="_blank">Ver ubicación Colegiata</a
-                  >
-                  <p class="text-verde-oscuro inline">&nbsp;/&nbsp;</p>
-                  <a
-                    href="https://maps.app.goo.gl/CQMvyWbbvFdZbP9U6"
-                    target="_blank"
-                  >
-                    Ver ubicación parking cercano</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="w-16 h-16 bg-verde-oscuro text-white text-lg font-bold rounded-full flex items-center justify-center shadow-md absolute -top-4 -left-4"
-          >
-            A
-          </div>
-        </div>
+        <RoadmapSingle
+          item="A"
+          title="Colegiata de Santa María de Baiona"
+          time="17:30"
+          image="/images/colegiata.jpg"
+          location="https://maps.app.goo.gl/h3NMABJhLgm2Rsjq5"
+          secondLocation="true"
+        />
+
         <!-- Línea de conexión -->
         <div class="bg-verde-oscuro min-h-[10vh] h-[10vh] w-1 mt-4 mb-6"></div>
+
         <!-- Punto B -->
-        <div class="relative w-full text-verde-oscuro">
-          <div
-            class="relative w-full flex flex-col lg:flex-row justify-evenly items-center text-center bg-white border-2 border-verde-suave rounded-md shadow-lg py-14 px-12 divide-y lg:divide-y-0 lg:divide-x divide-verde-suave"
-          >
-            <div class="lg:w-1/2 py-10 lg:py-2">
-              <p class="font-medium text-verde-oscuro text-4xl">
-                Parador de Baiona
-              </p>
-              <p class="font-semibold text-verde-medio text-2xl">18:30</p>
-            </div>
-            <div class="lg:w-1/2 py-10 lg:py-2">
-              <div class="lg:w-2/3 mx-auto">
-                <div class="text-justify mb-6">
-                  <p class="font-semibold">
-                    El Parador de Baiona: Un castillo para celebrar el amor
-                  </p>
-                  <p>
-                    Rodeado por el mar y con vistas espectaculares, el Parador
-                    de Baiona es un castillo de cuento ideal para tu gran día.
-                    Entre salones elegantes y jardines mágicos, vivirás una
-                    celebración llena de historia, romanticismo y la esencia
-                    única de Galicia. ¡Un lugar digno de un brindis inolvidable!
-                    <br /><span class="text-xs text-neutral-500"
-                      >**Hay parking en el propio Parador.</span
-                    >
-                  </p>
-                </div>
-                <a
-                  class="text-verde-medio"
-                  href="https://maps.app.goo.gl/4dZKGsZPxfXGf3jb9"
-                  target="_blank">Ver la ubicación</a
-                >
-              </div>
-            </div>
-          </div>
-          <div
-            class="w-16 h-16 bg-verde-oscuro text-white text-lg font-bold rounded-full flex items-center justify-center shadow-md absolute -top-4 -left-4"
-          >
-            B
-          </div>
-        </div>
+        <RoadmapSingle
+          item="B"
+          title="Parador de Baiona"
+          time="18:30"
+          image="/images/parador.jpg"
+          location="https://maps.app.goo.gl/4dZKGsZPxfXGf3jb9"
+          parking="true"
+        />
       </div>
     </div>
     <!-- Botón -->

@@ -11,7 +11,7 @@ export default function Menu() {
     <div>
       {/* Botón para abrir/cerrar el menú móvil */}
       <button
-        className="block md:hidden text-verde-eucalipto focus:outline-none"
+        className="block lg:hidden text-verde-eucalipto focus:outline-none"
         onClick={toggleMenu}
       >
         <svg
@@ -32,36 +32,75 @@ export default function Menu() {
 
       {/* Menú móvil con transición */}
       <div
-        className={`font-normal fixed inset-0 w-screen h-screen bg-arena bg-opacity-95 z-50 shadow-lg rounded-lg md:hidden flex flex-col justify-center items-center transition-all duration-300 ${
+        className={`fixed inset-0 w-screen h-screen bg-arena bg-opacity-95 z-50 shadow-lg rounded-lg lg:hidden transition-all duration-300 ${
           isMenuOpen
             ? 'opacity-100 pointer-events-auto'
             : 'opacity-0 pointer-events-none'
         }`}
       >
-        <a
-          href="#nosotros"
-          className="block px-4 py-2 text-verde-oscuro hover:text-verde-suave"
-        >
-          Nosotros
-        </a>
-        <a
-          href="#evento"
-          className="block px-4 py-2 text-verde-oscuro hover:text-verde-suave"
-        >
-          El Evento
-        </a>
-        <a
-          href="#confirmar"
-          className="block px-4 py-2 text-verde-oscuro hover:text-verde-suave"
-        >
-          Confirmar Asistencia
-        </a>
-        <button
-          className="absolute top-5 right-8 font-semibold"
-          onClick={toggleMenu}
-        >
-          X
-        </button>
+        <div className="container h-screen mx-auto font-semibold text-verde-oscuro text-lg flex flex-col justify-center items-center w-screen gap-32">
+          <div className="text-3xl text-verde-oscuro font-windsong font-normal rounded-full size-24 border border-black flex justify-center items-center">
+            <a href="#">AyB</a>
+          </div>
+          <div className="text-center">
+            <a
+              href="#ubicacion"
+              onClick={toggleMenu}
+              className="block px-4 py-2 text-verde-oscuro hover:text-verde-suave"
+            >
+              Ubicación
+            </a>
+            <a
+              href="#alojamientos"
+              onClick={toggleMenu}
+              className="block px-4 py-2 text-verde-oscuro hover:text-verde-suave"
+            >
+              Alojamientos
+            </a>
+            <a
+              href="#codigo"
+              onClick={toggleMenu}
+              className="block px-4 py-2 text-verde-oscuro hover:text-verde-suave"
+            >
+              Código vestimenta
+            </a>
+            <a
+              href="#musica"
+              onClick={toggleMenu}
+              className="block px-4 py-2 text-verde-oscuro hover:text-verde-suave"
+            >
+              Sugerencia musical
+            </a>
+            <a
+              href="#fotos"
+              onClick={toggleMenu}
+              className="block px-4 py-2 text-verde-oscuro hover:text-verde-suave"
+            >
+              Fotos
+            </a>
+            <a
+              href="#confirmar"
+              onClick={toggleMenu}
+              className="block px-4 py-2 text-verde-oscuro hover:text-verde-suave"
+            >
+              Confirmar asistencia
+            </a>
+            <a
+              href="#faq"
+              onClick={toggleMenu}
+              className="block px-4 py-2 text-verde-oscuro hover:text-verde-suave"
+            >
+              FAQ
+            </a>
+          </div>
+
+          <button
+            className="absolute top-5 right-12 font-semibold"
+            onClick={toggleMenu}
+          >
+            X
+          </button>
+        </div>
       </div>
     </div>
   );

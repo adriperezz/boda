@@ -1,0 +1,62 @@
+---
+const { item, title, time, image, text, location, secondLocation, parking } =
+  Astro.props;
+---
+
+<!-- Punto A -->
+<div class="relative w-full text-verde-oscuro">
+  <div
+    class="relative w-full flex flex-col lg:flex-row justify-evenly items-center text-center bg-white border-2 border-verde-suave rounded-md shadow-lg py-10 lg:py-14 px-8 lg:px-12 divide-y lg:divide-y-0 lg:divide-x divide-verde-suave"
+  >
+    <div class="lg:w-1/2 w-full py-10 lg:py-2">
+      <p class="font-medium text-verde-oscuro text-2xl md:text-3xl lg:text-4xl">
+        {title}
+      </p>
+      <p class="font-semibold text-verde-medio text-2xl">{time}</p>
+    </div>
+    <div class="lg:w-1/2 w-full py-10 lg:py-2">
+      <div class="lg:w-3/4 mx-auto">
+        <div
+          class="min-h-60 min-w-full bg-cover bg-center border-2 border-neutral-200 rounded-lg shadow-lg shadow-neutral-200 opacity-90 mb-6"
+          style=`background-image:url('${image}')`
+        >
+        </div>
+        <div class="text-justify mb-6">
+          <p class="font-semibold">
+            {text}
+            {
+              parking && (
+                <>
+                  <p class="mt-2 text-xs text-neutral-500 font-normal">
+                    *El Parador dispone de parking.
+                  </p>
+                </>
+              )
+            }
+          </p>
+        </div>
+        <div class="text-verde-medio inline">
+          <a href=`${location}` target="_blank">Ver ubicación</a>
+          {
+            secondLocation && (
+              <>
+                <p class="text-verde-oscuro inline">&nbsp;/&nbsp;</p>
+                <a
+                  href="https://maps.app.goo.gl/CQMvyWbbvFdZbP9U6"
+                  target="_blank"
+                >
+                  Ver ubicación parking cercano
+                </a>
+              </>
+            )
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="w-16 h-16 bg-verde-oscuro text-white text-lg font-bold rounded-full flex items-center justify-center shadow-md absolute -top-4 -left-4"
+  >
+    {item}
+  </div>
+</div>

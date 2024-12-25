@@ -1,0 +1,36 @@
+---
+const { imageURL, title, text, bookingURL, airbnbURL } = Astro.props;
+---
+
+<!-- Baiona -->
+<div class="rounded-lg shadow-lg border-2 border-neutral-200 overflow-hidden">
+  <div
+    class="min-h-60
+        bg-cover
+        bg-center"
+    style=`background-image: url('${imageURL}')`
+  >
+  </div>
+  <div class="py-4 px-6">
+    <h3 class="uppercase font-bold mb-3 text-verde-oscuro">{title}</h3>
+    <p class="text-verde-oscuro mb-5">
+      {text}
+    </p>
+    <div class="flex gap-4 justify-center items-center">
+      <a
+        href=`${bookingURL}`
+        target="_blank"
+        class="bg-arena hover:bg-verde-oscuro text-verde-oscuro hover:text-white font-semibold py-3 px-6 rounded-lg transition duration-300 text-sm"
+      >
+        Ver en Booking
+      </a>
+      <a
+        href=`${airbnbURL}`
+        target="_blank"
+        class="bg-arena hover:bg-verde-oscuro text-verde-oscuro hover:text-white font-semibold py-3 px-6 rounded-lg transition duration-300 text-sm"
+      >
+        Ver en Airbnb
+      </a>
+    </div>
+  </div>
+</div>

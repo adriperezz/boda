@@ -16,7 +16,7 @@ const data = {
     {
       title: '¿Puedo llevar a mi mascota al evento?',
       content:
-        'Nos encantaría, pero lamentablemente no está permitido que las mascotas asistan al evento, ya que no se les permite la entrada ni en la iglesia ni en el parador. Si queréis traer a vuestra mascota a conocer galicía, os recomendamos LA SIGUIENTE ABSURA HUMANA',
+        'Nos encantaría, pero lamentablemente no está permitido que las mascotas asistan al evento, ya que no se les permite la entrada ni en la iglesia ni en el parador. Si queréis traer a vuestra mascota a conocer Galicia, os recomendamos que os alojéis en el hotel Attica 21, que dispondréis de un precio cerrado si al gestionar la reserva, indicáis que asistís a la boda de Adrián y Bruna. (Está en Vigo, si queréis alojaros en Baiona consultad opciones).',
     },
   ],
 };
