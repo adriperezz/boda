@@ -18,8 +18,17 @@ const {
     class="relative w-full flex flex-col lg:flex-row justify-evenly items-center text-center bg-white border-2 border-verde-suave rounded-md shadow-lg py-10 lg:py-14 px-8 lg:px-12 divide-y lg:divide-y-0 lg:divide-x divide-verde-suave"
   >
     <div class="lg:w-1/2 w-full py-10 lg:py-2">
+      {
+        parking && (
+          <>
+            <p class="text-xs text-white bg-red-400 inline rounded-lg px-4 py-1 font-normal">
+              *El sitio ha cambiado del Parador de Baiona al Pazo da Touza
+            </p>
+          </>
+        )
+      }
       <p
-        class="font-normal text-verde-oscuro text-lg md:text-xl lg:text-2xl mb-4"
+        class="font-normal text-verde-oscuro text-lg md:text-xl lg:text-2xl my-4"
       >
         {lugar}
       </p>
@@ -42,7 +51,7 @@ const {
               parking && (
                 <>
                   <p class="mt-2 text-xs text-neutral-500 font-normal">
-                    *El Parador dispone de parking.
+                    *El Pazo da Touza dispone de parking.
                   </p>
                 </>
               )
