@@ -13,6 +13,7 @@ export default {
       fontFamily: {
         windsong: ['Windsong', 'cursive'],
         lato: ['Lato', 'sans-serif'],
+        b612: ['B612 Mono', 'serif'],
       },
     },
   },
